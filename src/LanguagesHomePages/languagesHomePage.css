@@ -55,11 +55,11 @@
 
 .card-title--languageHomePage {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .card-circle--languageHomePage .card-text--languageHomePage {
-  font-size: 13px;
+  font-size: 1.2rem;
   width: 100%;
 }
 
@@ -118,8 +118,8 @@
   }
 
   .card-circle--languageHomePage {
-    width: 180px;
-    height: 180px;
+    width: 225px;
+    height: 225px;
     padding: 0px;
   }
 
@@ -131,15 +131,23 @@
 
 @media (min-width: 600px) {
   .card-circle--languageHomePage {
-    width: 225px;
-    height: 225px;
+    width: 240px;
+    height: 240px;
+  }
+
+  .card-circle--languageHomePage .btn-primary--languageHomePage {
+    padding: 5px 20px;
+    font-size: 12px;
   }
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
   .card-circle--languageHomePage {
-    width: 225px;
-    height: 225px;
+    width: 240px;
+    height: 240px;
+  }
+  .card-circle--languageHomePage .card-text--languageHomePage {
+    width: 100%;
   }
 }
 
