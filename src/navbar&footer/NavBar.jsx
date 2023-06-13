@@ -43,7 +43,7 @@ function NavBar() {
           </li>
           <li className="nav-item">
             <Link to="/signup" id="home" className="nav-link pl-5">
-              Register.
+              Sign Up.
             </Link>
           </li>
           <li className="nav-item">
