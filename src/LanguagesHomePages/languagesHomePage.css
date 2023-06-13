@@ -33,7 +33,6 @@
 
 .card-circle--languageHomePage {
   text-align: center;
-  /* background: #37b9f1; */
   border: 10px solid transparent;
   color: #fff;
   padding: 50px;
@@ -119,9 +118,9 @@
   }
 
   .card-circle--languageHomePage {
-    width: 220px;
-    height: 220px;
-    padding: 30px;
+    width: 180px;
+    height: 180px;
+    padding: 0px;
   }
 
   .card-circle--languageHomePage .btn-primary--languageHomePage {
@@ -146,8 +145,8 @@
 
 @media (min-width: 1200px) {
   .card-circle--languageHomePage {
-    width: 250px;
-    height: 250px;
+    width: 270px;
+    height: 270px;
   }
 
   #IntroLongText {
