@@ -10,6 +10,7 @@ function SignupPage() {
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const [passwordRe,setPasswordRe] = useState("");
+  const [errorMessage,setErrorMessage] = useState("");
 
   let  requestBody
 
@@ -25,10 +26,10 @@ function SignupPage() {
     nativelanguage
    }
 
-   if (name === "" || lastname === "" || email === "" || password === "" || passwordRe === "" || nativelanguage === "") {
+/*    if (name === "" || lastname === "" || email === "" || password === "" || passwordRe === "" || nativelanguage === "") {
     setErrorMessage("Please complete the mandatory fields.")
     return;
-  }
+  } */
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
@@ -36,16 +37,16 @@ function SignupPage() {
     return;
   }
 
-  if (password !== passwordRe) {
+/*   if (password !== passwordRe) {
     setErrorMessage("Passwords dont match.")
     return;
-  }
+  } */
 
-  const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
+/*   const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
   if (!passwordRegex.test(password)) {
     setErrorMessage("Check for Password requirement")
     return;
-  }
+  } */
 
   async function singUpAndLogin(){
     try {
@@ -54,16 +55,13 @@ function SignupPage() {
       
       const { email, password } = requestBody;
       const loginResponse = await authService.login({ email, password });
-      console.log('RESPONSE LOGIN', loginResponse);
       
-      const authToken = loginResponse.data.authToken;
+     /*  const authToken = loginResponse.data.authToken;
       storeToken(authToken);
-      authenticateUser();
-      console.log('dsps del autenticated')
-      navigate(`/profile/${signUpResponse.data.user._id}`);
+     */
+      navigate(`/about_page`);
     } catch (error) {
       const errorDescription = error.response.data.message;
-      console.log('error', error);
       setErrorMessage(errorDescription);
     }
   }
@@ -76,27 +74,31 @@ function SignupPage() {
   return (
     <>
     <div className="LoginPage">
+    {errorMessage && <div className="alert alert-danger alerta " role="alert">
+                {errorMessage}
+              </div>}
       <div className="LoginPage-box">
         <h1>Sign Up</h1>
 
         <form className="login--form  ">
           <label>Name:</label>
-          <input type="text" name="name" className="login--input" />
+          <input type="text" name="name" className="login--input"  value={name} onChange={(e) =>setName(e.target.value)}/>
 
           <label>Lastname:</label>
-          <input type="text" name="lastname" className="login--input" />
+          <input type="text" name="lastname" className="login--input" value={lastname} onChange={(e)=>setLastname(e.target.value)}/>
 
           <label>Native Lenguage:</label>
-          <input type="text" name="nativelanguage" className="login--input" />
+          <input type="text" name="nativelanguage" className="login--input"  value={nativelanguage} onChange={(e)=>setNativelanguage(e.target.value)}/>
 
           <label>Email:</label>
-          <input type="email" name="email" className="login--input" />
+          <input type="email" name="email" className="login--input" value={email} onChange={(e)=>setEmail(e.target.value)} />
 
           <label>Password:</label>
-          <input type="password" name="password" className="login--input" />
+          <input type="password" name="password" className="login--input" value={password} onChange={(e)=>setPassword(e.target.value)} />
+          <div id="emailHelp" class="form-text">Must have at least 6 characters,at least one number, one lowercase and one uppercase letter</div>
 
           <label>Repeat Password:</label>
-          <input type="password" name="passwordRe" className="login--input" />
+          <input type="password" name="passwordRe" className="login--input" value={passwordRe} onChange={(e)=>setPasswordRe(e.target.value)} />
 
           <button type="submit" className="login--loginButton" onClick={handleSignupSubmit}>
             {" "}
