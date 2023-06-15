@@ -51,11 +51,12 @@ function LanguageHomePage(props) {
             <p className="card-text--languageHomePage">
               Need to learn the letters first?
             </p>
-            <a href="#" className="btn btn-primary">
-              <Link to={`/${props.lettersTable}`} className="btn--link">
-                Learn
-              </Link>
-            </a>
+            <Link
+              to={`/${props.lettersTable}`}
+              className="btn btn-primary btn--link"
+            >
+              LEARN
+            </Link>
           </div>
         </div>
 
@@ -68,11 +69,12 @@ function LanguageHomePage(props) {
             <p className="card-text--languageHomePage">
               Want free resources for learning {props.language}?
             </p>
-            <a href="#" className="btn btn-primary">
-              <Link to={`/${props.resources}`} className="btn--link">
-                See
-              </Link>
-            </a>
+            <Link
+              to={`/${props.resources}`}
+              className="btn btn-primary btn--link"
+            >
+              SEE
+            </Link>
           </div>
         </div>
       </div>

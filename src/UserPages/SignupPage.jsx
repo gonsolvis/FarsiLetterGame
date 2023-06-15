@@ -98,7 +98,7 @@ function SignupPage() {
               onChange={(e) => setLastname(e.target.value)}
             />
 
-            <label>Native Lenguage:</label>
+            <label>Native Language:</label>
             <input
               type="text"
               name="nativelanguage"

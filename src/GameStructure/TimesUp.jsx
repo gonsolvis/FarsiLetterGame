@@ -11,18 +11,33 @@ export default function TimesUp(props) {
 
   return (
     <>
-      {/* <div className={modal ? "modal show" : "modal"}> */}
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
         <div className="you-have-lost">
           <h2>
             Time's up <FontAwesomeIcon icon={faStopwatch} />
           </h2>
-          <p className="my-4">
-            Oops! You ran out of time. You got a score of
-            <span className="currentScore--modal"> {props.currentScore}. </span>
-            Try again and get a new high score!
-          </p>
+
+          {props.heartsLeft === 5 ? (
+            <p className="my-4">
+              <span className="currentScore--modal"> BONUS: </span>
+              You got FIVE extra points for not losing any hearts. Your NEW
+              score is
+              <span className="currentScore--modal"> {props.currentScore}</span>
+              . Try again and get a new high score!
+            </p>
+          ) : (
+            <p className="my-4">
+              {" "}
+              Oops! You ran out of time. You got a score of
+              <span className="currentScore--modal">
+                {" "}
+                {props.currentScore}.{" "}
+              </span>
+              Try again and get a new high score!
+            </p>
+          )}
+
           <button
             className="restart-button my-3 mx-5"
             onClick={props.restartGame}
