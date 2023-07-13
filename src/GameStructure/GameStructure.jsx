@@ -15,6 +15,7 @@ function GameStructure({ cards, lettersTable }) {
   const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
   const [countdown, setCountdown] = useState(45);
+  console.log("cards", cards);
 
   function setRandomSymbolCards() {
     const newArrayOfSymbolCards = [];
