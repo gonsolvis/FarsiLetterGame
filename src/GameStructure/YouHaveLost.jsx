@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./endModal.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeartCrack } from "@fortawesome/free-solid-svg-icons";
 export default function YouHaveLost(props) {
-  // const [modal, setModal] = useState(false);
-
   const toggleModal = () => {
     console.log("I am being fucking clicked");
-    // setModal(!modal);
-    // console.log("AM I FUCKING TRUE", modal);
   };
 
   return (
     <>
-      {/* <div className={modal ? "modal show" : "modal"}> */}
       <div onClick={toggleModal} className="overlay"></div>
       <div className="modal-content">
         <div className="you-have-lost">
-          <h2>You Have Lost!</h2>
+          <h2>
+            You Have Lost!{" "}
+            <FontAwesomeIcon icon={faHeartCrack} style={{ color: "red" }} />
+          </h2>
           <p className="my-4">
             Oops! You ran out of hearts. You got a score of{" "}
             <span className="currentScore--modal"> {props.currentScore}. </span>{" "}
@@ -35,9 +34,7 @@ export default function YouHaveLost(props) {
             </Link>
           </button>
         </div>
-        {/* <button className="close-modal">CLOSE</button> */}
       </div>
-      {/* </div> */}
     </>
   );
 }

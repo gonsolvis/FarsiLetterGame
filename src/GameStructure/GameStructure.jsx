@@ -6,7 +6,6 @@ import { useState, useEffect } from "react";
 import PointsComp from "./PointsComp";
 import YouHaveLost from "./YouHaveLost";
 import TimesUp from "./TimesUp";
-// import { useLocation } from "react-router-dom";
 
 const AMOUNT_OF_CARDS = 3;
 
@@ -15,9 +14,8 @@ function GameStructure({ cards, lettersTable }) {
   const [score, setScore] = useState(0);
   const [hearts, setHearts] = useState(5);
   const [randomIndex, setRandomIndex] = useState(0);
-  const [countdown, setCountdown] = useState(30);
-
-  console.log("letterstable", lettersTable);
+  const [countdown, setCountdown] = useState(45);
+  console.log("cards", cards);
 
   function setRandomSymbolCards() {
     const newArrayOfSymbolCards = [];
@@ -46,13 +44,15 @@ function GameStructure({ cards, lettersTable }) {
       console.log("we have a match");
     } else {
       setHearts((prevScore) => prevScore - 1); // Decrease the score by 1
+      score >= 1 && setScore((prevScore) => prevScore - 1);
     }
   }
 
   function restartGame() {
     setHearts(5);
     setScore(0);
-    setCountdown(30);
+    setCountdown(45);
+    setRandomSymbolCards();
   }
 
   useEffect(() => {
@@ -60,20 +60,23 @@ function GameStructure({ cards, lettersTable }) {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCountdown((prevCountdown) => {
-        if (prevCountdown === 0) {
-          clearInterval(interval);
-          return 0;
-        }
-        return prevCountdown - 1;
-      });
-    }, 1000);
+    if (hearts > 1) {
+      const interval = setInterval(() => {
+        setCountdown((prevCountdown) => {
+          if (prevCountdown === 0) {
+            hearts === 5 && setScore((prevScore) => prevScore + 5);
+            clearInterval(interval);
+            return 0;
+          }
+          return prevCountdown - 1;
+        });
+      }, 1000);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [countdown]);
+      return () => {
+        clearInterval(interval);
+      };
+    }
+  }, [countdown, hearts]);
 
   return randomCards.length ? (
     <div className="outside--gameStructure">
@@ -90,11 +93,17 @@ function GameStructure({ cards, lettersTable }) {
               restartGame={() => restartGame()}
               currentScore={score}
               lettersTable={lettersTable}
+              heartsLeft={hearts}
             />
           )}
 
           {!countdown && (
-            <TimesUp restartGame={() => restartGame()} currentScore={score} />
+            <TimesUp
+              restartGame={() => restartGame()}
+              currentScore={score}
+              heartsLeft={hearts}
+              lettersTable={lettersTable}
+            />
           )}
         </div>
       </div>

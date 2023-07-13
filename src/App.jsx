@@ -13,6 +13,8 @@ import LanguagesShapes from "./dataLists/LettersLists/LettersListsShapes";
 import LettersTable from "./LettersHelp/LettersTable";
 import SignupPage from "./UserPages/SignupPage";
 import LoginPage from "./UserPages//LoginPage";
+import GamesLists from "./gamesList/GamesLists";
+import NumbersLists from "./dataLists/LettersLists/NumbersLists";
 
 import {
   BrowserRouter as Router,
@@ -44,6 +46,7 @@ function App() {
                   gameLink={language.gameLink}
                   lettersTable={language.lettersTable}
                   resources={language.resources}
+                  gamesLists={language.gamesLists}
                 />
               }
             />
@@ -79,6 +82,17 @@ function App() {
             />
           ))}
 
+          {NumbersLists.map((language, index) => {
+            console.log("numbers language", language.NumbersObject);
+            return (
+              <Route
+                key={index}
+                path={`/${language.numbersGamePath}`}
+                element={<GameStructure cards={language.NumbersObject} />}
+              />
+            );
+          })}
+          <Route path="/games_lists" element={<GamesLists />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/login" element={<LoginPage />} />
 

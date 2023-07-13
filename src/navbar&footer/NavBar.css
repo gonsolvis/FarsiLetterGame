@@ -26,3 +26,20 @@
   color: white;
   background-color: transparent;
 }
+
+.nav-link:active {
+  transform: scale(1.1);
+  color: white;
+}
+
+@media only screen and (max-width: 991px) {
+  .nav-item {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-link:active {
+    transform: scale(1.1);
+    color: white;
+  }
+}

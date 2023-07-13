@@ -13,6 +13,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     gameLink: "urdu_game",
     lettersTable: "urdu_letters_table",
     resources: "urdu_resources",
+    gamesLists: "games_lists_urdu",
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     gameLink: "arabic_game",
     lettersTable: "arabic_letters_table",
     resources: "arabic_resources",
+    gamesLists: "games_lists_arabic",
   },
   {
     id: 3,
@@ -43,6 +45,7 @@ const LANGUAGES_PAGES_TEMPLATE = [
     gameLink: "farsi_game",
     lettersTable: "farsi_letters_table",
     resources: "farsi_resources",
+    gamesLists: "games_lists_farsi",
   },
 ];
 

@@ -31,9 +31,10 @@ function LanguageHomePage(props) {
           <div className="card-body card-body--languageHomePage">
             <h5 className="card-title card-title--languageHomePage">Games</h5>
             <p className="card-text card-text--languageHomePage">
-              Want to learn letters?
+              Want to play a game?
             </p>
             <Link
+              // to={`/${props.gamesLists}`}
               to={`/${props.gameLink}`}
               className="btn btn-primary btn--link"
             >
@@ -47,15 +48,16 @@ function LanguageHomePage(props) {
           style={{ backgroundColor: props.color }}
         >
           <div className="card-body--languageHomePage">
-            <h5 className="card-title--languageHomePage">Letters</h5>
+            <h5 className="card-title--languageHomePage">Learn</h5>
             <p className="card-text--languageHomePage">
-              Need to learn the letters first?
+              Need to learn the material first?
             </p>
-            <a href="#" className="btn btn-primary">
-              <Link to={`/${props.lettersTable}`} className="btn--link">
-                Learn
-              </Link>
-            </a>
+            <Link
+              to={`/${props.lettersTable}`}
+              className="btn btn-primary btn--link"
+            >
+              STUDY
+            </Link>
           </div>
         </div>
 
@@ -66,13 +68,14 @@ function LanguageHomePage(props) {
           <div className="card-body--languageHomePage">
             <h5 className="card-title--languageHomePage">Resources</h5>
             <p className="card-text--languageHomePage">
-              Want free resources for learning {props.language}?
+              Want resources for learning {props.language}?
             </p>
-            <a href="#" className="btn btn-primary">
-              <Link to={`/${props.resources}`} className="btn--link">
-                See
-              </Link>
-            </a>
+            <Link
+              to={`/${props.resources}`}
+              className="btn btn-primary btn--link"
+            >
+              FIND
+            </Link>
           </div>
         </div>
       </div>
