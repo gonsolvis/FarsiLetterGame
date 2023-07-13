@@ -56,11 +56,11 @@
 
 .card-title--languageHomePage {
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 
 .card-circle--languageHomePage .card-text--languageHomePage {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   width: 100%;
 }
 
@@ -99,7 +99,7 @@
   text-decoration: underline;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1199px) {
   .card-circle--languageHomePage {
     margin-block: 30px;
     display: flex;
@@ -130,7 +130,7 @@
   }
 }
 
-@media (min-width: 600px) {
+/* @media (min-width: 600px) {
   .card-circle--languageHomePage {
     width: 240px;
     height: 240px;
@@ -150,7 +150,7 @@
   .card-circle--languageHomePage .card-text--languageHomePage {
     width: 100%;
   }
-}
+} */
 
 @media (min-width: 1200px) {
   .card-circle--languageHomePage {
