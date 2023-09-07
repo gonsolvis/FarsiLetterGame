@@ -1,0 +1,178 @@
+/* purple: #8739f9
+bllue: #37B9F1
+GREY: #F2F5F5
+FONT COLOURS::
+TEXT: #595360
+LABEL: #908E9B
+DISABLED: #E1DFE9  
+textsize one: 4rem
+textsize one: 3rem
+textsize one: 2rem*/
+
+.outside--gameStructure {
+  background-color: #f2f5f5;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; /* Add vertical scroll */
+  background-image: url("../images/Daco_5228516.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100%;
+}
+
+.outer--pointidv {
+  background-color: none;
+  height: 15%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.pointsComp {
+  background: linear-gradient(to right, #8739f9, #25c3e7);
+  height: 100px;
+  width: 500px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+#score {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heartsComp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  padding-bottom: 5px;
+}
+
+.countdown {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.cards-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.game--card--div {
+  width: 120px;
+  height: 120px;
+  font-size: 20px;
+  box-shadow: 0 2.5px 5px rgba(0, 0, 0, 0.25); /* Updated box shadow with bigger size */
+}
+
+#LetterGameWord {
+  font-size: 30px;
+}
+
+.game--card--p {
+  font-size: 40px;
+}
+
+.letterBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.segments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* gap: 70px; */
+}
+
+/* Default styles for all screen sizes */
+
+/* Media query for screens smaller than 576px */
+@media (max-width: 575px) {
+  .outside--gameStructure {
+    height: 80vh;
+    width: 100%;
+  }
+  .pointsComp {
+    height: 75px;
+    width: 300px;
+    padding: 5%;
+    /* margin-bottom: 100px; */
+  }
+  #currentScoreTitle {
+    font-size: 14px;
+  }
+
+  .countdown h5 {
+    font-size: 14px;
+  }
+
+  /*game card comp*/
+  .game--card--div {
+    width: 120px;
+    height: 120px;
+  }
+  #LetterGameWord {
+    font-size: 30px;
+  }
+  .game--card--p {
+    font-size: 40px;
+  }
+
+  .cards-container {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .segments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+
+/* Media query for screens between 576px and 768px */
+@media (min-width: 576px) and (max-width: 767px) {
+  /* Styles for medium-sized screens */
+}
+
+/* Media query for screens between 768px and 992px */
+@media (min-width: 768px) and (max-width: 991px) {
+  /* Styles for larger screens */
+}
+
+/* Media query for screens larger than 992px */
+@media (min-width: 992px) {
+  /* Styles for extra-large screens */
+}

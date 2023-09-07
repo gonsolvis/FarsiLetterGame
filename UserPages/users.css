@@ -1,0 +1,63 @@
+.LoginPage {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f5f5;
+  padding: none;
+}
+
+.LoginPage-box {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login--form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login--input {
+  width: 40%;
+  margin-bottom: 2%;
+  padding: 0.5%;
+  border: 3px solid#8739f9;
+}
+
+.login--signupLink {
+  color: #37b9f1;
+}
+
+.login--p {
+  padding: 2%;
+}
+
+.login--loginButton {
+  background-color: #8739f9;
+  margin-top: 2%;
+  font-size: 1rem;
+  /* border-radius: 6px; */
+  width: 25vh;
+  padding: 1%;
+  border: none;
+}
+
+@media screen and (max-width: 768px) {
+  .login--input {
+    width: 70%;
+    margin-bottom: 2%;
+    padding: 0.5%;
+    border: 3px solid#8739F9;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+}

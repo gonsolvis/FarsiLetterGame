@@ -1,0 +1,198 @@
+.homePage--languageHomePage {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./src/images/Daco_5228516.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow-y: auto; /* Add vertical scroll */
+  overflow-x: auto; /* Add vertical scroll */
+}
+
+.homePage--box--languageHomePage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#languageHomePage--cardbox {
+  width: 50%;
+  text-align: center;
+}
+
+#languageHomePage--cardbox span {
+  font-size: 40px;
+}
+
+/*cardcirle */
+
+.card-circle--languageHomePage {
+  text-align: center;
+  border: 10px solid transparent;
+  color: #fff;
+  padding: 50px;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5); /* Updated box shadow with bigger size */
+  margin-block: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body--languageHomePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+}
+
+.card-title--languageHomePage {
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.card-circle--languageHomePage .card-text--languageHomePage {
+  font-size: 1.1rem;
+  width: 100%;
+}
+
+.btn--link {
+  color: white;
+  text-decoration: none;
+}
+.btn {
+  background: transparent;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  padding: 5px 30px;
+  border-radius: 0px;
+  font-weight: 600;
+}
+
+.card-circle--languageHomePage .btn,
+.card-circle--languageHomePage {
+  transition: all ease-in-out 0.2s;
+}
+
+.card-circle--languageHomePage .btn:hover {
+  transform: scale(1.1);
+  color: white;
+  border: 2px solid;
+  background-color: transparent;
+}
+
+.card-circle--languageHomePage:hover {
+  transform: scale(1.1);
+  box-shadow: 0 7.5px 30px rgba(0, 0, 0, 0.5); /* Updated box shadow with bigger size */
+}
+
+.btn--link:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 1199px) {
+  .card-circle--languageHomePage {
+    margin-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: none;
+  }
+  #languageHomePage--cardbox {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  #languageHomePage--cardbox p {
+    font-size: 15px;
+  }
+  #languageHomePage--h5title {
+    font-size: 20px;
+  }
+
+  .card-circle--languageHomePage {
+    width: 225px;
+    height: 225px;
+    padding: 0px;
+  }
+
+  .card-circle--languageHomePage .btn-primary--languageHomePage {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+}
+
+/* @media (min-width: 600px) {
+  .card-circle--languageHomePage {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card-circle--languageHomePage .btn-primary--languageHomePage {
+    padding: 5px 20px;
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  .card-circle--languageHomePage {
+    width: 240px;
+    height: 240px;
+  }
+  .card-circle--languageHomePage .card-text--languageHomePage {
+    width: 100%;
+  }
+} */
+
+@media (min-width: 1200px) {
+  .card-circle--languageHomePage {
+    width: 300px;
+    height: 300px;
+  }
+
+  .card-circle--languageHomePage .card-text--languageHomePage {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .card-circle--languageHomePage .btn-primary {
+    padding: 10px 40px;
+  }
+
+  .btn--link {
+    font-size: 1.2rem;
+  }
+
+  #IntroLongText {
+    display: block;
+  }
+  #IntroShortText {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .homePage--box--languageHomePage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #IntroLongText {
+    display: none;
+  }
+  #IntroShortText {
+    display: block;
+  }
+}
